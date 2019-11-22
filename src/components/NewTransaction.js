@@ -126,7 +126,7 @@ export default class NewTransaction extends Component {
                         </a>
                       );
                     })}
-                    <AddIdentity />
+                    {/* <AddIdentity /> */}
                   </div>
                 }
               />

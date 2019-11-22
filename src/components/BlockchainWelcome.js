@@ -81,7 +81,7 @@ class BlockchainWelcome extends Component {
                         identity={identity}
                       />
                     ))}
-                    <AddIdentity />
+                    {/* <AddIdentity /> */}
                   </div>
                 </WalkthroughTooltip>
               }
