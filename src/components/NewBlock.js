@@ -73,7 +73,7 @@ class NewBlock extends Component {
           />
         </Tabs2>
 
-        <div style={{ float: "right" }}>
+        <div style={{ float: "right" , marginTop: "20px"}}>
           <Tooltip
             content={
               <p style={{ maxWidth: "250px" }}>
@@ -90,7 +90,7 @@ class NewBlock extends Component {
             step={4}
           >
             <Button
-              iconName="pt-icon-add"
+              
               className={classnames("pt-intent-primary", {
                 "pt-disabled": !this.props.block.isValid()
               })}

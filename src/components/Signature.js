@@ -88,7 +88,7 @@ export default class Signature extends Component {
             {this.props.isEditable && (
               <div className="pt-input-action">
                 <Button
-                  iconName="pt-icon-add"
+                  
                   className="pt-intent-primary"
                   text={this.props.signature === "" ? "Add" : "Update"}
                   onClick={this.openSignature}
@@ -109,24 +109,13 @@ export default class Signature extends Component {
               corresponding private key can yield a valid signature. Updates to
               transaction data require an updated signature.
             </p>
-            <table>
-              <thead>
-                <tr>
-                  <th>Public Key</th>
-                  <th>Message to Sign</th>
-                  <th />
-                  <th>Private Key</th>
-                  <th />
-                  <th>Signature</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    <Key value={this.props.publicKey} />
-                  </td>
-                  <td>
-                    <textarea
+            <div>
+             
+                  <div>Public Key</div>
+                  <Key value={this.props.publicKey} />
+
+                  <div>Message to Sign</div>
+                  <textarea
                       className="pt-input"
                       placeholder="Signature"
                       style={{
@@ -136,10 +125,11 @@ export default class Signature extends Component {
                       readOnly={true}
                       value={this.props.messageToSign}
                     />
-                  </td>
-                  <td>+</td>
-                  <td>
-                    <Popover2 defaultIsOpen={true}>
+
+
+
+                  <div>Private Key</div>
+                  <Popover2 defaultIsOpen={true}>
                       <textarea
                         className="pt-input"
                         placeholder="Private Key"
@@ -174,15 +164,13 @@ export default class Signature extends Component {
                             </a>
                           );
                         })}
-                        <AddIdentity />
+                        {/* <AddIdentity /> */}
                       </div>
                     </Popover2>
-                  </td>
-                  <td>
-                    <Icon iconName="pt-icon-arrow-right" />
-                  </td>
-                  <td>
-                    <textarea
+
+                  <Icon iconName="pt-icon-arrow-right" />
+                  <div>Signature</div>
+                  <textarea
                       className="pt-input"
                       placeholder="Signature"
                       style={{
@@ -191,10 +179,9 @@ export default class Signature extends Component {
                       }}
                       value={this.calculatedSignature()}
                     />
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+                
+
+            </div>
             <div className="pt-dialog-footer">
               <div className="pt-dialog-footer-actions">
                 <Button text="Cancel" onClick={this.closeSignature} />
@@ -207,7 +194,7 @@ export default class Signature extends Component {
                   step={12}
                 >
                   <Button
-                    iconName="pt-icon-add"
+                    
                     className="pt-intent-primary"
                     onClick={this.submitSignature}
                     text="Update Signature"

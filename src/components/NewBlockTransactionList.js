@@ -154,7 +154,7 @@ export default class NewBlockTransactionList extends Component {
           </Collapse>
 
           <Button
-            iconName="pt-icon-add"
+            
             className="pt-intent-primary pt-input-action"
             onClick={this.addTransaction}
             disabled={

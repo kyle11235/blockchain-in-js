@@ -79,8 +79,13 @@ class Blockchain {
   }
 
   _addBlock(block) {
-    if (!block.isValid()) return;
-    if (this.containsBlock(block)) return;
+    let valid = block.isValid();
+    console.log('valid = ' + valid);
+    if (!valid) return;
+
+    let contains = this.containsBlock(block);
+    console.log('contains = ' + contains);
+    if (contains) return;
 
     // check that the parent is actually existent and the advertised height is correct
     const parent = this.blocks[block.parentHash];

@@ -15,7 +15,7 @@ function createIdentity() {
   const pair = generatePair();
 
   return {
-    name: "Identity " + pair.publicKey.substr(0, 10),
+    name: "用户 " + pair.publicKey.substr(0, 10),
     ...pair
   };
 }
@@ -27,7 +27,7 @@ identities[identity.publicKey] = identity;
 
 let state = {
   walkthrough: {
-    show: true,
+    show: false, // hide warlthrough by default
     step: 0,
     enabled: window.localStorage.getItem("walkthroughEnabled") === null
   },

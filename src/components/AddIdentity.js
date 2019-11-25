@@ -7,7 +7,7 @@ export default class AddIdentity extends Component {
     return (
         <Button
         text="Add another identity"
-        iconName="pt-icon-add"
+        
         className="pt-intent-primary pt-input-action"
         style={{ paddingLeft: '15px'}}
         onClick={() => action({type: 'ADD_IDENTITY'})}

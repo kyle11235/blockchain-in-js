@@ -117,7 +117,7 @@ export default class WelcomeUTXOPoolTable extends Component {
                 step={13}
               >
                 <Button
-                  iconName="pt-icon-add"
+                  
                   className={classnames("pt-intent-primary", {
                     "pt-disabled": !this.isValidTransaction()
                   })}

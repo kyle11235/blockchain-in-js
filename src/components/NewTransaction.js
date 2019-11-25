@@ -46,21 +46,9 @@ export default class NewTransaction extends Component {
 
   render() {
     return (
-      <table>
-        <thead>
-          <tr>
-            <th>Transaction Hash</th>
-            <th>Sender Public Key</th>
-            <th />
-            <th>Receiver Public Key</th>
-            <th>Amount</th>
-            <th>Fee</th>
-            <th>Signature</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
+          <div>
+            <div>Transaction Hash</div>
+            <div>
               <textarea
                 className="pt-input"
                 spellCheck={false}
@@ -68,8 +56,10 @@ export default class NewTransaction extends Component {
                 value={this.props.transaction.hash}
                 readOnly
               />
-            </td>
-            <td>
+            </div>
+
+            <div>Sender Public Key</div>
+            <div>
               <Tooltip
                 content={
                   <p style={{ maxWidth: "250px" }}>
@@ -100,11 +90,14 @@ export default class NewTransaction extends Component {
                   }
                 />
               </Tooltip>
-            </td>
-            <td>
-              <Icon iconName="pt-icon-arrow-right" />
-            </td>
-            <td>
+            </div>
+            
+            <div>
+              <Icon iconName="pt-icon-arrow-down" />
+            </div>
+
+            <div>Receiver Public Key</div>
+            <div>
               <Key
                 value={this.props.transaction.outputPublicKey}
                 onChange={this.onChangeOutputPublicKey}
@@ -130,8 +123,11 @@ export default class NewTransaction extends Component {
                   </div>
                 }
               />
-            </td>
-            <td>
+            </div>
+
+
+            <div>Amount</div>
+            <div>
               <Tooltip
                 content={<p style={{ maxWidth: "250px" }}>Be generous!</p>}
                 step={8}
@@ -149,8 +145,10 @@ export default class NewTransaction extends Component {
                   value={this.props.transaction.amount}
                 />
               </Tooltip>
-            </td>
-            <td>
+            </div>
+
+            <div>Fee</div>
+            <div>
               <Tooltip
                 content={
                   <p style={{ maxWidth: "250px" }}>
@@ -177,8 +175,10 @@ export default class NewTransaction extends Component {
                   value={this.props.transaction.fee}
                 />
               </Tooltip>
-            </td>
-            <td>
+            </div>
+
+            <div>Signature</div>
+            <div style={{marginBottom:"20px"}}>
               <Tooltip
                 content={
                   <p style={{ maxWidth: "250px" }}>
@@ -199,10 +199,8 @@ export default class NewTransaction extends Component {
                   onOpenSignatureDialog={advanceTo.bind(this, 11)}
                 />
               </Tooltip>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+            </div>
+          </div>
     );
   }
 }

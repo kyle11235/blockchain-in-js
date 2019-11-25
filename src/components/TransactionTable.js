@@ -17,12 +17,8 @@ export default class TransactionTable extends Component {
         <thead>
           <tr>
             <th>Transaction Hash</th>
-            <th>Sender Public Key</th>
-            <th />
-            <th>Receiver Public Key</th>
             <th>Amount</th>
-            <th>Fee</th>
-            <th>Signature</th>
+            <th>...</th>
           </tr>
         </thead>
         <tbody>
@@ -38,15 +34,7 @@ export default class TransactionTable extends Component {
                     readOnly
                   />
                 </td>
-                <td>
-                  <Key value={tx.inputPublicKey} />
-                </td>
-                <td>
-                  <Icon iconName="pt-icon-arrow-right" />
-                </td>
-                <td>
-                  <Key value={tx.outputPublicKey} />
-                </td>
+                
                 <td
                   style={{
                     height: "100px",
@@ -57,24 +45,13 @@ export default class TransactionTable extends Component {
                 >
                   {tx.amount}
                 </td>
-                <td
-                  style={{
-                    height: "100px",
-                    width: "100px",
-                    fontSize: "34px",
-                    textAlign: "center"
-                  }}
-                >
-                  {tx.fee}
-                </td>
                 <td>
-                  <Signature
-                    signature={tx.signature}
-                    messageToSign={tx.hash}
-                    publicKey={tx.inputPublicKey}
-                    isEditable={false}
-                  />
+                  Fee ...<br/>
+                  From ...<br/>
+                  To ...<br/>
+                  Signature ...
                 </td>
+
                 <td>{this.props.transactionAction(tx)}</td>
               </tr>
             );

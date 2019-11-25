@@ -118,7 +118,10 @@ export default class NewBlockHeader extends Component {
               <td>
                 This is the part that is miners have to guess random values for
                 so that the hash becomes valid. Manually try to change the nonce
-                or <Button onClick={this.tryUntilFound}>brute-force</Button>
+                or 
+                <br/>
+                <Button className="pt-intent-primary pt-input-action"
+              onClick={this.tryUntilFound}>挖矿</Button>
               </td>
             </tr>
             <tr>

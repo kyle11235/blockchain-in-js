@@ -15,20 +15,7 @@ class App extends Component {
   render() {
     return (
       <div className="">
-        <nav className="pt-navbar">
-          <div className="pt-navbar-group pt-align-left">
-            <div className="pt-navbar-heading">Build your own Blockchain</div>
-            Made by&nbsp;<a
-              href="https://twitter.com/nambrot"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              @nambrot
-            </a>
-          </div>
-
-          
-        </nav>
+        
         <Dialog step={0} title="Welcome!" quitWalkthroughVisible={true}>
           <div>
             <p>
