@@ -29,7 +29,7 @@ let state = {
   walkthrough: {
     show: false, // hide warlthrough by default
     step: 0,
-    enabled: window.localStorage.getItem("walkthroughEnabled") === null
+    enabled: false
   },
   blockchains: [defaultBlockchain],
   selectedBlockchain: defaultBlockchain,
