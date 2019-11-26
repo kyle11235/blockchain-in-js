@@ -30,11 +30,7 @@ export default class Key extends Component {
   };
   render() {
     return (
-      <Tooltip
-        content={this.props.tooltipText}
-        inline={true}
-        position={Position.TOP}
-      >
+      
         <Popover2 autoFocus={false} popoverDidOpen={this.props.popoverDidOpen}>
           <textarea
             className="pt-input"
@@ -52,7 +48,7 @@ export default class Key extends Component {
           />
           {this.props.popover}
         </Popover2>
-      </Tooltip>
+
     );
   }
 }
